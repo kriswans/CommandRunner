@@ -1,6 +1,7 @@
 ## This defines functions to connect to an IOS switches and Router,
 # pull the inventory and hostname and print that to a file with the hostname of the Cisco device
 #It will do this in a single row, with the hostname and IP in the first 2 columns
+#use: pip install -e git+https://github.com/paramiko/paramiko/#egg=paramiko to install paramiko for ssh connectivity
 
 import paramiko
 
