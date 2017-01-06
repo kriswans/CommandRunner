@@ -5,9 +5,9 @@
 
 import paramiko
 
-host='192.168.220.238'
-username='cisco'
-password='cisco'
+#host='192.168.220.238'
+#username='cisco'
+#password='cisco'
 
 def  show_inventory_raw(host):
 
@@ -55,3 +55,21 @@ def  show_hostname(host):
         cmdout.write(',')
         cmdout.close()
   ssh.close()
+
+def pullDataFromFile():
+    line_do=[]
+    with open('hosts_list','r') as h_l:
+        for h_rows in h_l:
+            h_str_row=h_rows.strip()
+            #h_str_row="'"+str(h_str_row)+"'"
+            #print(h_str_row)
+            line_do.append(h_str_row)
+
+    host_list_len=(len(line_do))
+    h_i=0
+    while h_i < host_list_len :
+      show_hostname(line_do[h_i])
+      show_inventory_raw(line_do[h_i])
+      h_i+=1
+
+#pullDataFromFile()
