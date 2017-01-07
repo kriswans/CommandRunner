@@ -24,4 +24,12 @@ def RangePrinter(prefix,lo_h,hi_h):
       ip_file.close()
   except ValueError: print('upper and lower bounds require numerical value')
 
+def PrintHostList():
+    with open('hosts_list','r') as h_l:
+      for h_rows in h_l:
+        h_str_row=h_rows.strip()
+        print(h_str_row)
+
+
 #RangePrinter(prefix,lo_h,hi_h)
+#PrintHostList()
