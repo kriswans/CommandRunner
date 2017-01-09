@@ -22,6 +22,7 @@ while start != 10:
     if menu_choice == str(2):
         print(2*'\n')
         pullinvwrite.HostsCreateList()
+        break
         print(2*'\n')
         start=0
     if menu_choice == str(3):
