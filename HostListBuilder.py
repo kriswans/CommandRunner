@@ -4,6 +4,9 @@ lo_h=0
 hi_h=0
 
 def RangePrinter(prefix,lo_h,hi_h):
+  prefix='0'
+  lo_h=0
+  hi_h=0
   try:
     if prefix == '0':
       prefix=input('Enter the First 3 Octets:\n->')

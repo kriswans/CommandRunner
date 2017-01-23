@@ -1,0 +1,5 @@
+2017-01-23 12:45:50||>there was a problem connecting ssh to: 192.168.220.238 at 2017-01-23 12:45:50
+2017-01-23 12:46:11||>there was a problem connecting ssh to: 192.168.20.238 at 2017-01-23 12:46:11
+2017-01-23 12:46:32||>there was a problem connecting ssh to: 192.168.220.237 at 2017-01-23 12:46:32
+2017-01-23 12:46:53||>there was a problem connecting ssh to: 192.168.20.1 at 2017-01-23 12:46:53
+2017-01-23 12:47:14||>there was a problem connecting ssh to: core.swannynet.com at 2017-01-23 12:47:14

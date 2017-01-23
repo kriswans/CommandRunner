@@ -4,6 +4,12 @@ import HostListBuilder
 import time
 import paramiko
 import pullinvwrite
+import netaddr
+import datetime
+
+prefix='0'
+lo_h=0
+hi_h=0
 
 start=0
 while start != 10:
