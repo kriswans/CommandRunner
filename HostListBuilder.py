@@ -15,7 +15,7 @@ def RangePrinter(prefix,lo_h,hi_h):
     if hi_h ==0:
       hi_h=int(input('Enter the last host:\n->'))
     host_index=0
-    hosts=range(lo_h,hi_h)
+    hosts=range(lo_h,hi_h+1)
     for addys in hosts:
       str_addys=str(addys)
       host_index+=1
@@ -32,7 +32,3 @@ def PrintHostList():
       for h_rows in h_l:
         h_str_row=h_rows.strip()
         print(h_str_row)
-
-
-#RangePrinter(prefix,lo_h,hi_h)
-#PrintHostList()

@@ -19,6 +19,7 @@ while start != 10:
     print('*  '+'1=Enter Address Range to add to Host List'+'           *')
     print('*  '+'2=Run Inventory against the Host List'+'               *')
     print('*  '+'3=Print the Host List'+'                               *')
+    print('*  '+'4=Enter IOS command to run against host list'+'        *')
     print('*  '+"0=Enter '0' to quit                        "+'         *')
     print(56*'*')
     menu_choice=input('->')
@@ -35,6 +36,12 @@ while start != 10:
     if menu_choice == str(3):
         print(2*'\n')
         HostListBuilder.PrintHostList()
+        print(2*'\n')
+        start=0
+    if menu_choice == str(4):
+        print(2*'\n')
+        import freeFormCmd
+        freeFormCmd.HostsCreateList()
         print(2*'\n')
         start=0
     if menu_choice == str(0):
