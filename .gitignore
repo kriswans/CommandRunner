@@ -47,3 +47,5 @@ Temporary Items
 .apdisk
 hosts_list-d
 Debug.py
+__pycache__/HostListBuilder.cpython-36.pyc
+__pycache__/pullinvwrite.cpython-36.pyc

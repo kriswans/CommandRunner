@@ -51,7 +51,6 @@ def  show_hostname(host):
   stdin,stdout,stderr = ssh.exec_command("show run | incl hostname")
 
   for line in stdout.readlines():
-        #print (line.strip())
         cmdout=open('cmdoutput.csv','a')
         cmdout.write(line.strip())
         cmdout.write(',')
@@ -64,8 +63,6 @@ def HostsCreateList():
     with open('hosts_list','r') as h_l:
       for h_rows in h_l:
         h_str_row=h_rows.strip()
-            #h_str_row="'"+str(h_str_row)+"'"
-            #print(h_str_row)
         line_do.append(h_str_row)
       host_list_len=(len(line_do))
       h_i=0
@@ -75,19 +72,18 @@ def HostsCreateList():
           show_inventory_raw(line_do[h_i])
           h_i+=1
         except Exception:
-              #print("problem with IP addess")
-          print("there was a problem connecting ssh to: {ld}".format(ld=line_do[h_i]))
+          print("There was a problem connecting ssh to: {ld}, please make sure device exists and is reachable.".format(ld=line_do[h_i]))
           ts = time.time()
           st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
           error_file=open('error_file.txt','a')
+          error_file.write("Using HostsCreateList Function's Exception:\n")
           error_file.write("{timestp}||>there was a problem connecting ssh to: {ld} at {timestp}\n".format(ld=line_do[h_i], timestp=st))
+          error_file.write("{timestp}||>the list length counter is at:{hi}, the host list length is: {hll} at {timestp}\n".format(hi=h_i,hll=host_list_len, timestp=st))
           error_file.close()
           rm_line=line_do[h_i]
           line_do.remove(rm_line)
           host_list_len=len(line_do)
           LoopThruHosts(h_i,host_list_len)
-
-
 
 def LoopThruHosts(h_i,host_list_len):
           while h_i <= host_list_len :
@@ -96,18 +92,15 @@ def LoopThruHosts(h_i,host_list_len):
               show_inventory_raw(line_do[h_i])
               h_i+=1
             except Exception:
-              print("there was a problem connecting ssh to: {ld}".format(ld=line_do[h_i]))
+              print("There was a problem connecting ssh to: {ld}, please make sure device exists and is reachable.".format(ld=line_do[h_i]))
               ts = time.time()
               st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
               error_file=open('error_file.txt','a')
+              error_file.write("Using LoopThruHosts Fucntions Exception:\n")
               error_file.write("{timestp}||>there was a problem connecting ssh to: {ld} at {timestp}\n".format(ld=line_do[h_i], timestp=st))
+              error_file.write("{timestp}||>the list length counter is at:{hi}, the host list length is: {hll} at {timestp}\n".format(hi=h_i,hll=host_list_len, timestp=st))
               error_file.close()
               rm_line=line_do[h_i]
               line_do.remove(rm_line)
               host_list_len=len(line_do)
-              print(host_list_len)
-              print(h_i)
               LoopThruHosts(h_i,host_list_len)
-
-
-#HostsCreateList()

@@ -1,5 +1,6 @@
-2017-01-23 12:45:50||>there was a problem connecting ssh to: 192.168.220.238 at 2017-01-23 12:45:50
-2017-01-23 12:46:11||>there was a problem connecting ssh to: 192.168.20.238 at 2017-01-23 12:46:11
-2017-01-23 12:46:32||>there was a problem connecting ssh to: 192.168.220.237 at 2017-01-23 12:46:32
-2017-01-23 12:46:53||>there was a problem connecting ssh to: 192.168.20.1 at 2017-01-23 12:46:53
-2017-01-23 12:47:14||>there was a problem connecting ssh to: core.swannynet.com at 2017-01-23 12:47:14
+Using HostsCreateList Function's Exception:
+2017-02-21 13:55:29||>there was a problem connecting ssh to: 172.16.1.44 at 2017-02-21 13:55:29
+2017-02-21 13:55:29||>the list length counter is at:4, the host list length is: 7 at 2017-02-21 13:55:29
+Using LoopThruHosts Fucntions Exception:
+2017-02-21 13:55:50||>there was a problem connecting ssh to: 172.17.2.41 at 2017-02-21 13:55:50
+2017-02-21 13:55:50||>the list length counter is at:4, the host list length is: 6 at 2017-02-21 13:55:50

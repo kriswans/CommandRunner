@@ -13,6 +13,7 @@ hi_h=0
 
 start=0
 while start != 10:
+  try:
     print(56*'*')
     print('*  '+'Please Enter Your Choice: '+'                          *')
     print('*  '+'1=Enter Address Range to add to Host List'+'           *')
@@ -39,4 +40,8 @@ while start != 10:
     if menu_choice == str(0):
         break
     start+=1
+  except:
+    print("\n\n\nThere has been an error or exception. Please check error_file.txt for more info.")
+    break
+
 print("\n\nThanks for stopping by...exiting now")
